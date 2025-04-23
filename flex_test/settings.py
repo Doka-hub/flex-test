@@ -162,7 +162,7 @@ CELERY_TIMEZONE = config('CELERY_TIMEZONE', 'UTC')
 CELERY_BEAT_SCHEDULE = {
     'update_subscriptions_task_every_30_minutes': {
         'task': 'apps.subscriptions.tasks.update_subscriptions_task',
-        'schedule': timedelta(minutes=1),
+        'schedule': timedelta(minutes=30),
         'options': {'timezone': 'Asia/Bishkek'},
     },
 }
